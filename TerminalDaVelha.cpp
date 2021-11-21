@@ -1,5 +1,5 @@
 #include <iostream>
-#include <random>
+#include <time.h>
 
 class ABoard
 {
@@ -143,6 +143,8 @@ public:
 
 	void MakeMove(const ABoard* Board, int& Row, int& Column) override
 	{
+		srand(time(NULL));
+
 		for (int RowIndex = 0; RowIndex < 3; ++RowIndex)
 		{
 			for (int ColumnIndex = 0; ColumnIndex < 3; ++ColumnIndex)
